@@ -32,7 +32,8 @@ cd $projectWorkPath
 rm -rf ./**
 
 # 复制新的工程
-cp $projectPath/jenkins*.jar $projectWorkPath/
+cd $projectPath/jenkinsTest/target
+cp jenkins*.jar $projectWorkPath/
 
 cd $projectWorkPath
 mv jenkins*.jar project.jar

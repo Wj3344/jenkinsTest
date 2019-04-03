@@ -22,10 +22,13 @@ killProject()
     fi
 }
 
+cd $projectPath
+mvn clean package -DskipTests
+
 # 停止之前的运行
 killProject
 # 删除原有工程
-rm -rf $projectWorkPath
+rm -rf $projectWorkPath/*
 
 # 复制新的工程
 cp $projectPath/jenkins*.jar $projectWorkPath/

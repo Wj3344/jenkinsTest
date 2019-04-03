@@ -28,15 +28,15 @@ mvn clean package -DskipTests
 # 停止之前的运行
 killProject
 # 删除原有工程
-cd $projectWorkPath
+cd $projectWorkPath/
 rm -rf ./**
 
 # 复制新的工程
-cd $projectPath/jenkinsTest/target
+cd $projectPath/jenkinsTest/target/
 cp jenkins*.jar $projectWorkPath/
 
-cd $projectWorkPath
+cd $projectWorkPath/
 mv jenkins*.jar project.jar
 
 # 启动工程
-nohup java -jar project.jar &
+nohup java -jar project.jar > log_`date +%Y%m%d%H` &

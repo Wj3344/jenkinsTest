@@ -27,4 +27,3 @@
 ### VS Code ###
 .vscode/
 /.mvn/
-src/main/java/com/chen/jenkinstest/controller/

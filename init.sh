@@ -22,7 +22,7 @@ killProject()
     fi
 }
 
-cd $projectPath
+cd $projectPath/jenkinsTest
 mvn clean package -DskipTests
 
 # 停止之前的运行

@@ -12,7 +12,7 @@
 ### base 函数
 killProject()
 {
-    pid=`ps -aux | grep "java -jar jenkinsTest"|awk '{print $2}'`
+    pid=`ps -ef  | grep "java -jar jenkinsTest"|awk '{print $2}'`
     echo "tomcat Id list :$pid"
     if [[ "$pid" = "" ]]
     then
